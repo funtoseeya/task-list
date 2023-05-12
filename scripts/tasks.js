@@ -78,7 +78,7 @@ function addTask(event) {
     //log the task array to the console
     console.log(taskArray);
 
-
+        // listen for when the delete button is clicked
     deleteButton.addEventListener("click", function () {
         // remove the parent <li> element from the DOM
         li.remove();
@@ -115,8 +115,9 @@ function addTask(event) {
         completedText.style.fontStyle="italic";
         //add it to the li element
         li.append(completedText);
-
+        // when i hover over the complete text
         completedText.addEventListener("mouseenter", function() {
+            //change it to blue and make my mouse a pointer
             completedText.style.color = "blue";
             completedText.style.cursor = "pointer";
 
@@ -125,10 +126,13 @@ function addTask(event) {
             completedText.style.color = ""; // Resets the color to its default
             completedText.style.cursor = ""; // Resets the cursor to its default
           });
-
+          // if i click on the completed text
     completedText.addEventListener("click", function () {
+        //remove it
         completedText.remove();
+        // replace it with the complete button
         li.append(completeButton);
+        //restyle
         li.style.backgroundColor="white";
         li.style.color="black";
     })

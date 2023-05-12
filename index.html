@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tasks</title>
+    <!-- CSS stylesheets -->
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Font Awesome 5.15.3 CSS file from the official Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="files/tasks.png">
+</head>
+
+<body>
+    <section class="landing-section" id="home">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="landing-text">
+                        <h1 class="text-center">Tasks</h1>
+                        <p class="text-center">Manage your to-do list.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Welcome to your new task list.</h1>
+                <h2 class="display-5"> Start by creating a new task. Then, either mark them as complete or delete them.</h2>
+                <p class="lead" id="number-of-tasks"></p>
+
+                <p id="invite"></p>
+                <h1 class="lead mt-3" id="empty-state-message">What are you waiting for? Create your first task now!</h1>
+                <div class="container">
+                <div class="row">
+                <input class="form-control w-25" type="text" placeholder="Enter a task..." id="new-task" required>
+                    <button class="btn btn-sm btn-primary ml-3" id="create-task" disabled>Create task</button>
+                </div>
+
+            </div>
+            <ul id="task-list" class="mt-3 " style="padding-left:0px;"></ul>
+
+            </div>
+        </div>
+    </section>
+    <script src="scripts/tasks.js"></script>
+</body>
+
+</html>
